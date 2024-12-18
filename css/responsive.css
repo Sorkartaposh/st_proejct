@@ -1,0 +1,337 @@
+/*
+====================================
+Medium Screen - Others
+====================================
+*/
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+
+    .subscription_table .cancel {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .subscription_table .recommendations {
+        font-size: 12px;
+    }
+    .subscription_table .log-usage {
+        font-size: 12px;
+    }
+    .subscription_table {
+        overflow: hidden;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+====================================
+Small Screen - Tablate
+====================================
+*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+
+    .dashboard_rightside_content .drsc_title {
+        margin-top: 20px;
+    }
+    .dashboard_title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .signup_form_wrapper {
+        padding: 32px 20px;
+    }
+    .set_method_right_content .row.mt_32 {
+        margin-top: 20px;
+    }
+
+    .set_method_right_content .sm_choose_timeframe select {
+        margin-top: 15px;
+    }
+
+    .set_method_right_content {
+        margin-top: 40px;
+    }
+
+
+    .personal_details_content {
+        padding: 20px 15px;
+        border-radius: 12px;
+        border: 1px solid #E9EAEB;
+        background-color: #fff;
+    }
+
+    .pd_uplaod_thumb img {
+        margin: 0 auto;
+    }
+
+    .subscription_table .cancel {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .subscription_table .recommendations {
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .subscription_table .log-usage {
+        font-size: 12px;
+    }
+    .subscription_table {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .subscription_table table {
+        width: 1200px;
+    }
+
+
+    .bar_chart_title {
+        margin-top: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+====================================
+Small Screen - Mobile
+====================================
+*/
+@media screen and (min-width: 576px) and (max-width: 767px) {	
+
+    .dashboard_rightside_content .drsc_title {
+        margin-top: 20px;
+    }
+    .dashboard_title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .signup_form_wrapper {
+        padding: 32px 20px;
+    }
+    .set_method_right_content .row.mt_32 {
+        margin-top: 20px;
+    }
+
+    .set_method_right_content .sm_choose_timeframe select {
+        margin-top: 15px;
+    }
+
+
+    .set_method_right_content {
+        margin-top: 30px;
+    }
+
+    .personal_details_content {
+        padding: 20px 15px;
+        border-radius: 12px;
+        border: 1px solid #E9EAEB;
+        background-color: #fff;
+    }
+
+    .pd_uplaod_thumb img {
+        margin: 0 auto;
+    }
+
+    .subscription_table .cancel {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .subscription_table .recommendations {
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .subscription_table .log-usage {
+        font-size: 12px;
+    }
+    .subscription_table {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .subscription_table table {
+        width: 1200px;
+    }
+
+
+    .addnew_subs_btn button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+
+    .bar_chart_title {
+        margin-top: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+====================================
+Xtra Small Screen - Small Mobile
+====================================
+*/
+@media screen and (max-width: 575px) {
+
+
+    .signup_form_wrapper {
+        padding: 32px 20px;
+    }
+
+    .dashboard_title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .dashboard_rightside_content .drsc_title {
+        margin-top: 20px;
+    }
+
+
+    .set_method_right_content .row.mt_32 {
+        margin-top: 20px;
+    }
+    .set_method_right_content .sm_choose_timeframe select {
+        margin-top: 15px;
+    }
+
+
+    .set_method_right_content {
+        margin-top: 20px;
+    }
+
+
+
+    .personal_details_content {
+        padding: 20px 15px;
+        border-radius: 12px;
+        border: 1px solid #E9EAEB;
+        background-color: #fff;
+    }
+
+    .pd_uplaod_thumb img {
+        margin: 0 auto;
+    }
+
+
+    .subscription_table .cancel {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .subscription_table .recommendations {
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .subscription_table .log-usage {
+        font-size: 12px;
+    }
+    .subscription_table {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .subscription_table table {
+        width: 1150px;
+    }
+
+
+    .card_cancel_content {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .addnew_subs_btn button {
+        padding: 10px;
+        font-size: 12px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .overview_chart_title  .addnew_subs_btn button {
+        margin-top: 0;
+        margin-left: auto;
+    }
+
+
+    .bar_chart_title {
+    margin-top: 20px;
+    }
+.overview_chart_area button {
+	padding: 5px 8px;
+	font-size: 12px;
+	font-weight: 500;
+}
+.bar_chart_area .bar_chart_button {
+	padding: 5px 8px;
+	font-size: 12px;
+	font-weight: 500;
+
+}
+
+.bar_chart_area {
+    padding-bottom: 50px;
+}
+.pie_chart_content ul li {
+    font-size: 12px;
+}
+.pie_chart_content canvas {
+	max-width: 220px;
+	max-height: 220px;
+}
+
+
+
+}

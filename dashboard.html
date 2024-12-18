@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Meta setup -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="">
+		<meta name="decription" content="">
+		<meta name="designer" content="">
+		
+		<!-- Title -->
+		<title>Dashboard</title>
+		
+		<!-- Fav Icon -->
+		<link rel="icon" href="images/favicon.ico" />
+		
+		<!-- font awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+		<!-- Include Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		
+		<!-- Main StyleSheet -->
+		<link rel="stylesheet" href="style.css" />	
+		
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/responsive.css" />	
+		
+	</head>
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+		<main>
+			<!--============= deshboard header area start =============-->
+			<div class="dashboard_header_area">
+				<div class="container">
+					<div class="row g-0">
+						<div class="col-8">
+							<div class="dashboard_header_left">
+								<div class="dashboard_header_logo">
+									<a href="./dashboard.html"><img src="images/logo/logo.png" alt=""></a>
+								</div>
+								<div class="dashboard_header_menu d-none d-sm-block">
+									<ul>
+										<li><a href="./dashboard.html" class="active">Dashboard</a></li>
+										<li><a href="./insights.html">Insights</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="dashboard_header_profile">
+								<ul>
+									<li>
+										<a href="./set_method.html"><i class="fa-solid fa-gear"></i></a>
+									</li>
+									<li>
+										<div class="dropdown">
+											<div type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+												<img src="images/profile1.png" alt="">
+											</div>
+											<ul class="dropdown-menu dropdown-menu-end mt-1 p-0" aria-labelledby="dropdownMenuButton1">
+												<li class="p-0"><a class="dropdown-item text-end" href="./personal_details.html">Account Information</a></li>
+												<li><a class="dropdown-item text-end" href="./index.html">Log Out</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--============= deshboard header area end =============-->
+
+			<!--============= deshboard title area start =============-->
+			<div class="container">
+				<div class="dashboard_title dashboard-updt-title">
+					<h2>Upcoming Payments</h2>
+					<span>Reminders for your upcoming payments.</span>
+				</div>
+			</div>
+			<!--============= deshboard title area end =============-->
+
+			<!--============= deshboard main content area start =============-->
+			<section>
+				<div class="container">
+					<div class="for-border-box">
+						<div class="dashboard-1st-row">
+							<div class="dashboard-1st-single">
+								<div>
+									<div>
+										<img src="images/icon/n-icon.svg" alt="">
+									</div>
+									<div>
+										<h4>Netflix</h4>
+										<p>Netflix is set to renew in 3 days</p>
+									</div>
+								</div>
+								<p>Active From: May 2024 – Present</p>
+							</div>
+							<div class="dashboard-1st-single">
+								<div>
+									<div>
+										<img src="images/icon/n-icon.svg" alt="">
+									</div>
+									<div>
+										<h4>Spotify</h4>
+										<p>Spotify is set to renew in 3 days</p>
+									</div>
+								</div>
+								<p>Active From: May 2024 – Present</p>
+							</div>
+						</div>
+					</div>
+					<div class="row dashboard_title_row">
+						<div class="col-12">
+							<div class="dashboard_auto_cancel">
+								<h2>Automated Cancellation</h2>
+								<span>Subscriptions which you have not used in a while.</span>
+							</div>
+							<div class="for-border-box2">
+								<div class="automated-cancellation-bottom">
+									<div>
+										<span>
+											<img src="images/icon/File-type-icon.svg" alt="">
+										</span>
+										<h4>Amazon</h4>
+									</div>
+									<div>
+										<a href="#">Cancelled</a>
+									</div>
+									<div>
+										<h4>Inactive for 3 months</h4>
+										<p>This app was inactive for last 3 months</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div>
+								<div class="active-subscriptions">
+									<div>
+										<h2>Active Subscriptions</h2>
+										<span>All the active Subscriptions you have currently.</span>
+									</div>
+									<div>
+										<ul>
+											<li><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add New Subscription</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="subscription_table">
+									<table>
+										<thead>
+										  <tr>
+											<th>App <img src="images/icon/updown_arrow.png" alt=""></th>
+											<th>Start Date <img src="images/icon/updown_arrow.png" alt=""></th>
+											<th>Next Renewal Date <img src="images/icon/updown_arrow.png" alt=""></th>
+											<th>Cost Per Cycle <img src="images/icon/updown_arrow.png" alt=""></th>
+											<th>Payment Method <img src="images/icon/updown_arrow.png" alt=""></th>
+											<th>Options</th>
+										  </tr>
+										</thead>
+										<tbody>
+										  <tr>
+											<td><span class="icon">OR</span> Spotify</td>
+											<td>Dec 3, 2024</td>
+											<td>Dec 3, 2024</td>
+											<td>$10/Weekly</td>
+											<td>
+												<span>
+													<img class="st_pmt_card" src="images/icon/sh-icon-visa.svg" alt="">
+												</span>
+												<div class="table-heading-box">
+													<h4>Visa 1234</h4> 
+													<p>Expiry 06/2025</p>
+												</div>
+											</td>
+											<td class="table_modify_btn_wrapper">
+											  <button class="log-usage" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Modify</button> 
+											  <button class="log-usage">Log Usage</button> 
+											  <button class="cancel">Cancel</button>
+											</td>
+										  </tr>
+										  <tr>
+											<td><span class="icon">AC</span> Netflix</td>
+											<td>Dec 3, 2024</td>
+											<td>Dec 3, 2024</td>
+											<td>$10/Weekly</td>
+											<td>
+												<span>
+													<img  class="st_pmt_card" src="images/icon/sh-icon-visa.svg" alt="">
+												</span>
+												<div class="table-heading-box">
+													<h4>Visa 1234</h4> 
+													<p>Expiry 06/2025</p>
+												</div>
+											</td>
+											<td class="table_modify_btn_wrapper">
+											  <button class="log-usage" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Modify</button> 
+											  <button class="log-usage">Log Usage</button>
+											  <button class="cancel">Cancel</button>
+											</td>
+										  </tr>
+										  <tr>
+											<td><span class="icon">OR</span> Amazon</td>
+											<td>Dec 3, 2024</td>
+											<td>Dec 3, 2024</td>
+											<td>$10/Weekly</td>
+											<td>
+												<span>
+													<img  class="st_pmt_card" src="images/icon/sh-icon-payment.svg" alt="">
+												</span>
+												<div class="table-heading-box">
+													<h4>Visa 1234</h4> 
+													<p>Expiry 06/2025</p>
+												</div>
+											</td>
+											<td class="table_modify_btn_wrapper">
+											  <button class="log-usage" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Modify</button> 
+											  <button class="log-usage">Log Usage</button>
+											  <button class="cancel">Cancel</button>
+											</td>
+										  </tr>
+										</tbody>
+									  </table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--============= deshboard main content area end =============-->
+
+		</main>
+		
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+			<div>
+				<h2 class="modal-title fs-5" id="staticBackdropLabel">Add Subscription</h2>
+				<p>Add full details about your subscription here.</p>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<label class="pt-0" for="a1">App Name<span>*</span></label>
+					<input id="a1" type="text" placeholder="Name of the App">
+					<label for="a2">Category<span>*</span></label>
+					<select id="a2" placeholder="Select your app category">
+						<option value="education">education</option>
+						<option value="productivity">productivity</option>
+						<option value="fitness">fitness</option>
+						<option value="entertainment">entertainment</option>
+						<option value="other">other</option>
+					</select>
+					<label for="a3">Start Date</label>
+					<input type="date" placeholder="Select dates">
+					<label for="a4">Payment Cycle<span>*</span></label>
+					<select id="a2" placeholder="Select your app category">
+						<option value="monthly">monthly</option>
+						<option value="yearly">yearly</option>
+					</select>
+					<label for="a5">Cost Per Payment Cycle (£)<span>*</span></label>
+					<input id="a5" type="text" placeholder="Mention cost per payment cycle">
+				</form>
+				<label for="a6">Payment Method</label>
+				<select id="a6" placeholder="Select your payment method">
+						<option>Select your payment method</option>
+						<option value="visa">visa</option>
+						<option value="mastercard">mastercard</option>
+				</select>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-bs-dismiss="modal">Cancel</button>
+				<button type="button">Apply</button>
+			</div>
+		
+			
+		</div>
+		</div>
+	</div>
+
+	<!-- Modal2 -->
+	<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+			<div>
+				<h2 class="modal-title fs-5" id="staticBackdropLabel">Add Subscription</h2>
+				<p>Add full details about your subscription here.</p>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<label class="pt-0" for="a1">App Name<span>*</span></label>
+					<input id="a1" type="text" placeholder="Name of the App" value="Netflix">
+					<label for="a2">Category<span>*</span></label>
+					<select id="a2" placeholder="Select your app category">
+						<option value="education">education</option>
+						<option value="productivity">productivity</option>
+						<option value="fitness">fitness</option>
+						<option value="entertainment">entertainment</option>
+						<option value="other">other</option>
+					</select>
+					<label for="a3">Start Date</label>
+					<input type="date" placeholder="Select dates" value="2024-12-12">
+					<label for="a4">Payment Cycle<span>*</span></label>
+					<select id="a2" placeholder="Select your app category">
+						<option value="monthly">monthly</option>
+						<option value="yearly">yearly</option>
+					</select>
+					<label for="a5">Cost Per Payment Cycle (£)<span>*</span></label>
+					<input id="a5" type="text" placeholder="Mention cost per payment cycle" value="£10">
+				</form>
+				<label for="a6">Payment Method</label>
+				<select id="a6" placeholder="Select your payment method">
+						<option value="visa">visa</option>
+						<option value="mastercard">mastercard</option>
+				</select>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-bs-dismiss="modal">Cancel</button>
+				<button type="button">Apply</button>
+			</div>
+		</div>
+		</div>
+	</div>
+  
+		
+		
+		
+		
+		
+		
+		<!-- Main jQuery -->
+		<script src="js/jquery-3.4.1.min.js"></script>
+		
+		<!-- Bootstrap.bundle Script -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		
+		<!-- Custom jQuery -->
+		<script src="js/scripts.js"></script>
+		
+	</body>
+</html>

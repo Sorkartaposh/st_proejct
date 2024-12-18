@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Meta setup -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="">
+		<meta name="decription" content="">
+		<meta name="designer" content="">
+		
+		<!-- Title -->
+		<title>Insights</title>
+		
+		<!-- Fav Icon -->
+		<link rel="icon" href="images/favicon.ico" />
+		
+		<!-- font awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+		<!-- Include Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		
+		<!-- Main StyleSheet -->
+		<link rel="stylesheet" href="style.css" />	
+		
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/responsive.css" />	
+		
+	</head>
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+		<main>
+			<!--============= deshboard header area start =============-->
+			<div class="dashboard_header_area">
+				<div class="container">
+					<div class="row g-0">
+						<div class="col-8">
+							<div class="dashboard_header_left">
+								<div class="dashboard_header_logo">
+									<a href="./dashboard.html"><img src="images/logo/logo.png" alt=""></a>
+								</div>
+								<div class="dashboard_header_menu d-none d-sm-block">
+									<ul>
+										<li><a href="./dashboard.html">Dashboard</a></li>
+										<li><a href="./insights.html" class="active">Insights</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="dashboard_header_profile">
+								<ul>
+									<li>
+										<a href="./set_method.html"><i class="fa-solid fa-gear"></i></a>
+									</li>
+									<li>
+										<div class="dropdown">
+											<div type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+												<img src="images/profile1.png" alt="">
+											</div>
+											<ul class="dropdown-menu dropdown-menu-end mt-1 p-0" aria-labelledby="dropdownMenuButton1">
+												<li class="p-0"><a class="dropdown-item text-end" href="./personal_details.html">Account Information</a></li>
+												<li><a class="dropdown-item text-end" href="./index.html">Log Out</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--============= deshboard header area end =============-->
+
+			<!--============= deshboard main content area start =============-->
+			<section>
+				<div class="container">
+					<div class="row overview_chart_title dashboard_title_row border-0">
+						<div class="col-sm-8 col-6">
+							<div class="dashboard_auto_cancel">
+								<h2>Insights</h2>
+							</div>
+						</div>
+						<div class="col-sm-4 col-6">
+							<div class="addnew_subs_btn">
+								<button data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get Recommendation</button>
+							</div>
+						</div>
+					</div>
+					<!-- overview chart here -->
+					<div class="overview_chart_area">
+						
+						<div class="bar_chart_title">
+							<ul>
+								<li><h4>Total Spending Overview & Forecast</h4></li>
+								<li>
+									<div class="dropdown">
+										<div class="vertical_elipsis_icon" role="button" id="dropdownoption" data-bs-toggle="dropdown" aria-expanded="false">
+											<i class="fa-solid fa-ellipsis-vertical"></i>
+										</div>
+										<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownoption">
+											<li><a class="dropdown-item" href="#">Subscription 1</a></li>
+											<li><a class="dropdown-item" href="#">Subscription 2</a></li>
+											<li><a class="dropdown-item" href="#">Subscription 3</a></li>
+											<li><a class="dropdown-item" href="#">All</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<canvas id="myChart" width="600" height="400"></canvas>
+						<div class="buttons">
+							<button onclick="updateChart(12)">12 Months</button>
+							<button onclick="updateChart(30)">30 Days</button>
+							<button onclick="updateChart(7)">7 Days</button>
+							<button onclick="customRange()">+ Custom</button>
+						</div>
+					</div>
+					<!-- bar chart chart here -->
+					<div class="bar_chart_area">
+						<div class="row bar_chart_row">
+							<div class="col-lg-8">
+								<div class="bar_chart_content">
+									<div class="bar_chart_title">
+										<ul>
+											<li><h4>Usage Pattern</h4></li>
+											<li>
+												<div class="dropdown">
+													<div class="vertical_elipsis_icon" role="button" id="dropdownoption" data-bs-toggle="dropdown" aria-expanded="false">
+														<i class="fa-solid fa-ellipsis-vertical"></i>
+													</div>
+													<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownoption">
+														<li><a class="dropdown-item" href="#">option here</a></li>
+														<li><a class="dropdown-item" href="#">option here</a></li>
+														<li><a class="dropdown-item" href="#">option here</a></li>
+														<li><a class="dropdown-item" href="#">option here</a></li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<canvas id="bar_chart_canvas"></canvas>
+									<div class="bar_chart_buttons">
+										<button class="bar_chart_button" id="bar_chart_btn12Months">12 months</button>
+										<button class="bar_chart_button" id="bar_chart_btn30Days">30 days</button>
+										<button class="bar_chart_button" id="bar_chart_btn7Days">7 days</button>
+										<button class="bar_chart_button" id="bar_chart_btnCustom">+ Custom</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="bar_chart_title">
+									<ul>
+										<li><h4>Spending by Category</h4></li>
+										<li>
+											<div class="dropdown">
+												<div class="vertical_elipsis_icon" role="button" id="dropdownoption" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-ellipsis-vertical"></i>
+												</div>
+												<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownoption">
+													<li><a class="dropdown-item" href="#">weekly</a></li>
+													<li><a class="dropdown-item" href="#">monthly</a></li>
+													<li><a class="dropdown-item" href="#">anually</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="pie_chart_content">
+									<canvas id="solidPieChart"></canvas>
+									<ul>
+										<li><span style="color:#7F56D9;">●</span> Entertainment</li>
+										<li><span style="color:#9E77ED;">●</span> Productivity</li>
+										<li><span style="color:#B692F6;">●</span> Education</li>
+										<li><span style="color:#D6BBFB;">●</span> Fitness</li>
+										<li><span style="color:#E9EAEB;">●</span> Others</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--============= deshboard main content area end =============-->
+
+		</main>
+		
+	
+        <!-- Recommendation Modal -->
+        <div class="modal recommendation_modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <div>
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Recommendation</h2>
+                    <p>Here is a recommendation list for you.</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="recommendation_content_wrapper">
+                        <div class="recommendation_content_content border-0 pt-0">
+                            <h4>Pricing</h4>
+                            <p>The amount you have used Neflix in the past month
+                            calculates to 20 per usage, please reevaluate your
+                            need for this subscription.</p>
+                        </div>
+                        <div class="recommendation_content_content">
+                            <h4>Productivity</h4>
+                            <p>Productivity was the most saturated category,
+                            please reevaluate your need for all the subscriptions
+                            in this category.</p>
+                        </div>
+                        <div class="recommendation_content_content border-0">
+                            <h4>Alternatives</h4>
+                            <p>Spotify was the least used subscription this month,
+                            do you need it or can you find a cheaper alternative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- Main jQuery -->
+		<script src="js/jquery-3.4.1.min.js"></script>
+		
+		<!-- Bootstrap.bundle Script -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		
+		<!-- chart js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		
+		<!-- Custom jQuery -->
+		<script src="js/scripts.js"></script>
+
+		<script>
+// Get the canvas element
+const ctx = document.getElementById('myChart').getContext('2d');
+
+// Full chart data
+const fullData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [
+        {
+            label: 'Dataset 1',
+            data: [10, 40, 20, 60, 30, 80, 50, 100, 70, 120, 90, 140],
+            borderColor: 'rgba(102, 51, 153, 1)',
+            backgroundColor: 'rgba(102, 51, 153, 0.1)',
+            tension: 0.3,
+            fill: true,
+        },
+        {
+            label: 'Dataset 2',
+            data: [15, 35, 25, 55, 45, 75, 65, 95, 85, 115, 105, 135],
+            borderColor: 'rgba(102, 51, 153, 0.6)',
+            backgroundColor: 'rgba(102, 51, 153, 0.05)',
+            tension: 0.3,
+            fill: true,
+        }
+    ]
+};
+
+// Chart configuration with Y-axis numbers hidden
+const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+            display: false // Disable dataset legend
+        },
+    },
+    scales: {
+        x: {
+            grid: {
+                display: false,
+                color: 'rgba(200, 200, 200, 0.2)',
+            }
+        },
+        y: {
+            grid: {
+                display: true,
+                color: 'rgba(200, 200, 200, 0.2)',
+            },
+            beginAtZero: true,
+            ticks: {
+                display: false // Hide Y-axis numbers
+            }
+        }
+    }
+};
+
+// Initialize the chart
+let chart = new Chart(ctx, {
+    type: 'line',
+    data: fullData,
+    options: options
+});
+
+// Function to update chart with a specific range
+function updateChart(range) {
+    let updatedData;
+    if (range === 12) {
+        updatedData = {
+            labels: fullData.labels,
+            datasets: fullData.datasets
+        };
+    } else if (range === 30) {
+        updatedData = {
+            labels: ['Day 1', 'Day 2', 'Day 3', '...', 'Day 30'], // Placeholder labels
+            datasets: [
+                {
+                    label: 'Dataset 1',
+                    data: Array.from({ length: 30 }, (_, i) => (i % 2 === 0 ? Math.floor(Math.random() * 200) : Math.floor(Math.random() * 100))),
+                    borderColor: 'rgba(102, 51, 153, 1)',
+                    backgroundColor: 'rgba(102, 51, 153, 0.1)',
+                    tension: 0.3,
+                    fill: true,
+                },
+                {
+                    label: 'Dataset 2',
+                    data: Array.from({ length: 30 }, (_, i) => (i % 2 === 0 ? Math.floor(Math.random() * 250) : Math.floor(Math.random() * 150))),
+                    borderColor: 'rgba(102, 51, 153, 0.6)',
+                    backgroundColor: 'rgba(102, 51, 153, 0.05)',
+                    tension: 0.3,
+                    fill: true,
+                }
+            ]
+        };
+    } else if (range === 7) {
+        updatedData = {
+            labels: ['Day 1', 'Day 2', 'Day 3', '...', 'Day 7'], // Placeholder labels
+            datasets: [
+                {
+                    label: 'Dataset 1',
+                    data: Array.from({ length: 7 }, (_, i) => (i % 2 === 0 ? Math.floor(Math.random() * 100) : Math.floor(Math.random() * 50))),
+                    borderColor: 'rgba(102, 51, 153, 1)',
+                    backgroundColor: 'rgba(102, 51, 153, 0.1)',
+                    tension: 0.3,
+                    fill: true,
+                },
+                {
+                    label: 'Dataset 2',
+                    data: Array.from({ length: 7 }, (_, i) => (i % 2 === 0 ? Math.floor(Math.random() * 120) : Math.floor(Math.random() * 80))),
+                    borderColor: 'rgba(102, 51, 153, 0.6)',
+                    backgroundColor: 'rgba(102, 51, 153, 0.05)',
+                    tension: 0.3,
+                    fill: true,
+                }
+            ]
+        };
+    }
+
+    chart.data = updatedData;
+    chart.update();
+}
+
+// Placeholder for custom range
+function customRange() {
+    alert("Custom range functionality not implemented yet!");
+}
+
+
+
+			
+		//////////////////////////// bar chart start here ////////////////////////////
+		// Chart.js context and chart initialization
+const barChartCtx = document.getElementById('bar_chart_canvas').getContext('2d');
+
+// Data for different time ranges
+const barChartData12Months = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [
+        {
+            label: "Amazon",
+            data: [20, 22, 25, 28, 30, 32, 35, 36, 38, 40, 42, 45],
+            backgroundColor: '#7F56D9',
+            borderColor: '#7F56D9',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        },
+        {
+            label: "Netflix",
+            data: [40, 38, 40, 42, 43, 45, 48, 50, 52, 53, 55, 58],
+            backgroundColor: '#B39BEA',
+            borderColor: '#B39BEA',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        },
+        {
+            label: "Spotify",
+            data: [30, 32, 33, 36, 38, 40, 43, 45, 46, 48, 50, 52],
+            backgroundColor: '#E7DCFF',
+            borderColor: '#E7DCFF',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        }
+    ]
+};
+
+const barChartData30Days = {
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    datasets: [
+        {
+            label: "Amazon",
+            data: [18, 20, 22, 25, 27, 28, 30, 32, 34, 35, 37, 39],
+            backgroundColor: '#7F56D9',
+            borderColor: '#7F56D9',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        },
+        {
+            label: "Netflix",
+            data: [35, 37, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+            backgroundColor: '#B39BEA',
+            borderColor: '#B39BEA',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        },
+        {
+            label: "Spotify",
+            data: [28, 29, 31, 34, 35, 36, 38, 39, 40, 41, 42, 43],
+            backgroundColor: '#E7DCFF',
+            borderColor: '#E7DCFF',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        }
+    ]
+};
+
+const barChartData7Days = {
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+        {
+            label: "Amazon",
+            data: [16, 18, 20, 21, 23, 24, 26],
+            backgroundColor: '#7F56D9',
+            borderColor: '#7F56D9',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        },
+        {
+            label: "Netflix",
+            data: [33, 34, 36, 37, 38, 39, 40],
+            backgroundColor: '#B39BEA',
+            borderColor: '#B39BEA',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        },
+        {
+            label: "Spotify",
+            data: [27, 28, 30, 32, 33, 34, 36],
+            backgroundColor: '#E7DCFF',
+            borderColor: '#E7DCFF',
+            borderWidth: 0,
+            borderRadius: 10,
+            barThickness: 32
+        }
+    ]
+};
+
+// Initialize the chart
+let barChartInstance = new Chart(barChartCtx, {
+    type: 'bar',
+    data: barChartData12Months,
+    options: {
+        responsive: true,
+        scales: {
+            x: {
+                stacked: true,
+                ticks: {
+                    font: {
+                        size: 12,
+                        weight: 400
+                    },
+                    color: '#535862'
+                },
+                grid: {
+                    display: false
+                }
+            },
+            y: {
+                beginAtZero: true,
+                stacked: true,
+                ticks: {
+                    display: false
+                },
+                grid: {
+                    display: true
+                }
+            }
+        },
+        plugins: {
+            tooltip: {
+                mode: 'index',
+                intersect: false
+            },
+            legend: {
+                position: 'top', // Align legend at top-right
+                align: 'end',
+                labels: {
+                    boxWidth: 8,
+                    boxHeight: 8,
+                    borderRadius: 50,
+                    font: {
+                        size: 12,
+                        weight: 400
+                    },
+                    padding: 10
+                }
+            }
+        }
+    }
+});
+
+// Button Event Handlers
+document.getElementById('bar_chart_btn12Months').addEventListener('click', function() {
+    barChartInstance.data = barChartData12Months;
+    barChartInstance.update();
+});
+
+document.getElementById('bar_chart_btn30Days').addEventListener('click', function() {
+    barChartInstance.data = barChartData30Days;
+    barChartInstance.update();
+});
+
+document.getElementById('bar_chart_btn7Days').addEventListener('click', function() {
+    barChartInstance.data = barChartData7Days;
+    barChartInstance.update();
+});
+
+document.getElementById('bar_chart_btnCustom').addEventListener('click', function() {
+    alert('Custom range functionality to be implemented');
+});
+
+
+
+		//////////////////// pie chart start here
+		// Get the canvas element
+        const ctx2 = document.getElementById('solidPieChart').getContext('2d');
+
+        // Data for the pie chart
+        const pieData = {
+            labels: ['Entertainment', 'Productivity', 'Education', 'Fitness', 'Others'],
+            datasets: [{
+                label: 'Usage Distribution',
+                data: [20, 30, 25, 15, 10], // Adjust the values as needed
+                backgroundColor: [
+                    '#7F56D9',  // Entertainment
+                    '#9E77ED',  // Productivity
+                    '#B692F6',  // Education
+                    '#D6BBFB',  // Fitness
+                    '#E9EAEB'   // Others
+                ],
+                borderWidth: 0 // No border
+            }]
+        };
+
+        // Configuration for the chart
+        const config = {
+            type: 'pie',
+            data: pieData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false // Disable default legend
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                let value = context.raw;
+                                return `${label}: ${value}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        // Render the chart
+        new Chart(ctx2, config);
+		</script>
+		
+	</body>
+</html>
